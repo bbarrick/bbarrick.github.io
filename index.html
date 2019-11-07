@@ -224,11 +224,23 @@
       <!-- Contact Section Form -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-            <form action="https://formspree.io/mrgggzvl" method="POST">
-              <input type="text" name="name">
-              <input type="email" name="_replyto">
-              <textarea type="text" name="message"></textarea>
-              <input type="submit" value="Send">
+            <form id="fs-frm" action="https://formspree.io/mrgggzvl" accept-charset="utf-8" method="POST">
+              <fieldset id="fs-frm-inputs">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input class="form-control" type="text" name="name" id="full-name">
+                </div>
+                <div class="form-group">
+                  <label for="email-address">Email Address</label><br>
+                  <input type="email" class="form-control" name="_replyto" id="email-address" required>
+                </div>
+                  <div class="form-group">
+                  <label for="message">Message</label><br>
+                  <textarea class="form-control" rows="5" name="message" id="message" placeholder="" required></textarea>
+                </div>
+                  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                </fieldset>
+                <input type="submit" class="btn btn-primary py-3 px-0 px-lg-3 rounded" value="Submit">
             </form>
 
 <!--           <form action='https://formspree.io/mrgggzvl'  method="POST">
